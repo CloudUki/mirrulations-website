@@ -23,6 +23,12 @@ const ResultsSection = ({ results }) => {
           <strong>{docket.title}</strong>
           <p><strong>Agency Name:</strong> {docket.agencyName}</p>
           <p><strong>Docket ID:</strong> https://www.reulations.gov/docket/{docket.id}</p>
+          <p>
+            <strong>Docket ID: </strong> 
+            <a href={`https://www.regulations.gov/docket/${docket.id}`} target="_blank" rel="noopener noreferrer">
+              {docket.id}
+            </a>
+          </p>
           <p><strong>Matching Comments:</strong> {docket.comments.match}/{docket.comments.total}</p>
           <p><strong>Date Modified:</strong> {new Date(docket.dateModified).toLocaleDateString()}</p>
         </div>
